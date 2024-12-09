@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruits - Grocery Store</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff2df;
+            text-align: center;
+        }
+
+        header {
+            background-color: #f9ccac;
+            color: white;
+            padding: 30px;
+            text-transform: uppercase;
+            font-size: 1.5em;
+        }
+
+        section {
+            margin: 50px;
+        }
+
+        .product-item {
+            display: inline-block;
+            width: 250px;
+            margin: 25px;
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .product-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .product-item img {
+            width: 150px;
+            height: 150px;
+            border-radius: 8px;
+        }
+
+        button {
+            background-color: #ff6347;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #e5533b;
+        }
+
+        footer {
+            background-color: #ff6347;
+            color: white;
+            padding: 20px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        .back {
+            text-decoration: none;
+            color: #ff6347;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        .back:hover {
+            color: #e5533b;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Fresh Fruits - Grocery Store</h1>
+        <p>Discover our fresh, delicious fruits!</p>
+    </header>
+
+    <section class="products">
+        <h2>Our Fruits</h2>
+
+        <!-- Fruit Products -->
+        <div class="product-item">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTG5-qGBm2EvuFPYHa4Zm7yhHSIHK1r3HUKKg&s" alt="Apple">
+            <h3>Apple</h3>
+            <p>Rs120.00</p>
+            <button onclick="addToCart('Apple', 120.00)">Add to Cart</button>
+        </div>
+        <div class="product-item">
+            <img src="https://lh5.googleusercontent.com/proxy/6wyv22q_gkfvCqYEgBpon72GDS6ooUbqk7s39crR-45cH5Ihxn5O4q0U9HBSF0-2V9ZIPs10Pg6MkoVHVS4YBkFVhr_IjC7v_vHBe16LPzKSkS1nMNA" alt="Banana">
+            <h3>Banana</h3>
+            <p>Rs55.50</p>
+            <button onclick="addToCart('Banana', 55.50)">Add to Cart</button>
+        </div>
+        <div class="product-item">
+            <img src="https://www.shysha.in/wp-content/uploads/2021/10/Orange-1-Kg-150x150.jpg" alt="Orange">
+            <h3>Orange</h3>
+            <p>Rs75.00</p>
+            <button onclick="addToCart('Orange', 75.00)">Add to Cart</button>
+        </div>
+        <div class="product-item">
+            <img src="https://www.urbangroc.com/wp-content/uploads/2021/04/Green-Grapes-1-02-150x150.jpg" alt="Grapes">
+            <h3>Grapes</h3>
+            <p>Rs140.00</p>
+            <button onclick="addToCart('Grapes', 140.00)">Add to Cart</button>
+        </div>
+        <div class="product-item">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS04QBZogC7krrrfZzQF5MgxaEllsjYIbY4IQ&s" alt="Pineapple">
+            <h3>Pineapple</h3>
+            <p>Rs55.00</p>
+            <button onclick="addToCart('Pineapple', 55.00)">Add to Cart</button>
+        </div>
+        <div class="product-item">
+            <img src="https://www.bigbasket.com/media/uploads/p/s/40238984_1-fresho-guava-allahabad-chittidar-safeda-loaded-with-nutrients-great-for-skin-hair.jpg" alt="Guava">
+            <h3>Guava</h3>
+            <p>Rs85.00</p>
+            <button onclick="addToCart('Guava', 85.00)">Add to Cart</button>
+        </div>
+
+        <div class="product-item">
+            <img src="https://fruitsbaggy.com/wp-content/uploads/2023/11/kiwi7-150x150.png" alt="Kiwi">
+            <h3>Kiwi</h3>
+            <p>Rs180.00</p>
+            <button onclick="addToCart('Kiwi', 180.00)">Add to Cart</button>
+        </div>
+
+        <div class="product-item">
+            <img src="https://3.imimg.com/data3/IU/PF/MY-10389344/pomegrante-150x150-250x250.jpg" alt="Pomegranate">
+            <h3>Pomegranate</h3>
+            <p>Rs130.00</p>
+            <button onclick="addToCart('Pomegranate', 130.00)">Add to Cart</button>
+        </div>
+        <div class="product-item">
+            <img src="https://www.jiomart.com/images/product/150x150/599991264/pear-packham-premium-imported-4-pc-product-images-o599991264-p591057892-0-202401251515.jpg" alt="Pear">
+            <h3>Pear</h3>
+            <p>Rs175.00</p>
+            <button onclick="addToCart('Pear', 175.00)">Add to Cart</button>
+        </div>
+
+        <div class="product-item">
+            <img src="https://www.bigbasket.com/media/uploads/p/s/10000152-4_1-fresho-papaya-medium.jpg" alt="Papaya">
+            <h3>Papaya</h3>
+            <p>Rs65.00</p>
+            <button onclick="addToCart('Papaya', 65.00)">Add to Cart</button>
+        </div>
+
+        <div class="product-item">
+            <img src="https://www.jiomart.com/images/product/150x150/599990025/sapota-premium-indian-pack-500-g-product-images-o599990025-p590860313-0-202401251515.jpg" alt="Sapota">
+            <h3>Sapota</h3>
+            <p>Rs55.00</p>
+            <button onclick="addToCart('Sapota', 55.00)">Add to Cart</button>
+        </div>
+
+        <div class="product-item">
+            <img src="https://www.jiomart.com/images/product/150x150/590002624/coconut-1-piece-approx-300-g-600-g-product-images-o590002624-p590002624-0-202410141245.jpg" alt="Coconut">
+            <h3>Coconut</h3>
+            <p>Rs110.00</p>
+            <button onclick="addToCart('Coconut', 110.00)">Add to Cart</button>
+        </div>
+
+        <div class="product-item">
+            <img src="https://www.watermelon.org/wp-content/uploads/2020/07/Mini-Watermelon-Slice-150x150.jpg" alt="Watermelon">
+            <h3>Watermelon</h3>
+            <p>Rs60.00</p>
+            <button onclick="addToCart('Watermelon', 60.00)">Add to Cart</button>
+        </div>
+
+        <div class="product-item">
+            <img src="https://www.jiomart.com/images/product/150x150/599990806/muskmelon-bobby-medium-premium-indian-1-pc-product-images-o599990806-p590945253-0-202401241847.jpg" alt="Muskmelon">
+            <h3>Muskmelon</h3>
+            <p>Rs65.00</p>
+            <button onclick="addToCart('Muskmelon', 65.00)">Add to Cart</button>
+        </div>
+
+        <div class="product-item">
+            <img src="https://www.jiomart.com/images/product/150x150/599990880/dragon-fruit-white-premium-imported-1-pc-product-images-o599990880-p591021540-0-202401241848.jpg" alt="Dragon Fruit">
+            <h3>Dragon Fruit</h3>
+            <p>Rs250.00</p>
+            <button onclick="addToCart('Dragon Fruit', 250.00)">Add to Cart</button>
+        </div>
+
+        <div class="product-item">
+            <img src="https://www.thesophisticatedcaveman.com/wp-content/uploads/2017/06/Strawberries-150x150.jpg.webp" alt="Strawberry">
+            <h3>Strawberry</h3>
+            <p>Rs145.00</p>
+            <button onclick="addToCart('Strawberry', 145.00)">Add to Cart</button>
+        </div>
+
+        <div class="product-item">
+            <img src="https://www.frutasmontosa.com/en/wp-content/uploads/2018/02/benefits-mango-150x150.jpg" alt="Mango">
+            <h3>Mango</h3>
+            <p>Rs85.00</p>
+            <button onclick="addToCart('Mango', 85.00)">Add to Cart</button>
+        </div>
+
+        <div class="product-item">
+            <img src="https://www.urbangroc.com/wp-content/uploads/2021/04/Lemon-1-01-150x150.jpg" alt="Lemon">
+            <h3>Lemon</h3>
+            <p>Rs95.00</p>
+            <button onclick="addToCart('Lemon', 95.00)">Add to Cart</button>
+        </div>
+
+        <a href="home web1.html" class="back">Back to Home</a>
+
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Grocery Store</p>
+    </footer>
+
+    <script>
+        // Function to add items to the cart and redirect to cart page
+        function addToCart(product, price) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push({ product, price });
+            localStorage.setItem('cart', JSON.stringify(cart));
+            window.location.href = 'cart web 1.html';
+        }
+    </script>
+
+</body>
+</html>
