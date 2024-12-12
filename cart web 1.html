@@ -119,7 +119,7 @@
 
     <script>
         // Retrieve cart items from localStorage
-        let cart = JSON.parse(localStorage1.getItem('cart')) || [];
+        let cart = JSON.parse(localStorage.getItem('cart1')) || [];
 
         // Create an object to group items by their name and calculate the total price
         let groupedCart = {};
@@ -139,7 +139,7 @@
 
         // Function to update the localStorage and refresh the cart display
         function updateCart() {
-            localStorage1.setItem('cart', JSON.stringify(cart));
+            localStorage.setItem('cart', JSON.stringify(cart1));
             renderCart();
         }
 
